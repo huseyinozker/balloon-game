@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scripts/bonus_spike.gd" type="Script" id=1]
+[ext_resource path="res://assets/long_wood/long_wood_spike_01.png" type="Texture" id=2]
+[ext_resource path="res://assets/long_wood/long_wood_spike_02.png" type="Texture" id=3]
+[ext_resource path="res://assets/long_wood/long_wood_spike_03.png" type="Texture" id=4]
+[ext_resource path="res://assets/long_wood/long_wood_spike_04.png" type="Texture" id=5]
+[ext_resource path="res://assets/long_wood/long_wood_spike_05.png" type="Texture" id=6]
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -0.466297, 170.393, 0, 0, 0, 0, 0.00157166, -40.4612 )
+}
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 22.9877, 46.6471 )
+
+[node name="Path2D" type="Path2D" index="0"]
+
+self_modulate = Color( 0.5, 0.6, 1, 0.7 )
+position = Vector2( 171.38, 161.026 )
+curve = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." index="0"]
+
+position = Vector2( -0.466297, 170.393 )
+rotation = -1.5708
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = false
+lookahead = 4.001
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D" index="0"]
+
+position = Vector2( 1.26829e-007, -2.43521 )
+rotation = 1.5708
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PathFollow2D/Area2D" index="0"]
+
+frames = SubResource( 2 )
+animation = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D" index="1"]
+
+position = Vector2( -2.98941, -37.9969 )
+shape = SubResource( 3 )
+
+[connection signal="area_entered" from="PathFollow2D/Area2D" to="PathFollow2D/Area2D" method="_on_Area2D_area_entered"]
+
+[connection signal="animation_finished" from="PathFollow2D/Area2D/AnimatedSprite" to="PathFollow2D/Area2D" method="_on_AnimatedSprite_animation_finished"]
+
+

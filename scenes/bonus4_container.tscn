@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/bonus4.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+position = Vector2( 0, -33 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Path2D" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 160.375, -261.551 )
+scale = Vector2( 0.5, 0.6 )
+
+[node name="Path2D4" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 223.856, -261.551 )
+scale = Vector2( 0.5, 0.6 )
+
+[node name="Path2D5" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 287.337, -261.551 )
+scale = Vector2( 0.5, 0.6 )
+
+[node name="Path2D2" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 96.8732, -261.551 )
+scale = Vector2( 0.5, 0.6 )
+
+[node name="Path2D3" parent="." index="4" instance=ExtResource( 1 )]
+
+position = Vector2( 34.2501, -261.551 )
+scale = Vector2( 0.5, 0.6 )
+
+

@@ -1,0 +1,286 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/wave_menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui_elements/f.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui_elements/b_4.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui_elements/cursor.png" type="Texture" id=4]
+[ext_resource path="res://assets/ui_elements/videobbuttton.png" type="Texture" id=5]
+[ext_resource path="res://fonts/Acme-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/Arrow.png" type="Texture" id=7]
+[ext_resource path="res://assets/ui_elements/field.png" type="Texture" id=8]
+[ext_resource path="res://assets/sounds/win sound 2-1.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/ui_elements/s1.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 100
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 40
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 160, 240 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="continue_buttton" type="TextureButton" parent="." index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 61.0
+margin_top = 274.0
+margin_right = 663.0
+margin_bottom = 579.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 3 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Sprite" type="Sprite" parent="continue_buttton" index="0"]
+
+position = Vector2( 320.772, 143.679 )
+scale = Vector2( 1.91094, 1.91094 )
+texture = ExtResource( 4 )
+
+[node name="video_button" type="TextureButton" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 275.0
+margin_right = 771.0
+margin_bottom = 580.0
+rect_scale = Vector2( 0.15, 0.15 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 3 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Sprite" type="Sprite" parent="video_button" index="0"]
+
+position = Vector2( 189.799, 149.427 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="video_button" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 428.0
+margin_top = 74.0
+margin_right = 535.0
+margin_bottom = 591.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+3 "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Sprite2" type="Sprite" parent="video_button" index="2"]
+
+position = Vector2( 355.187, 143.644 )
+scale = Vector2( 0.547816, 0.547816 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite3" type="Sprite" parent="video_button" index="3"]
+
+position = Vector2( 381.854, 143.644 )
+scale = Vector2( 0.547816, 0.547816 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite4" type="Sprite" parent="video_button" index="4"]
+
+position = Vector2( 408.52, 143.644 )
+scale = Vector2( 0.547816, 0.547816 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="video_button2" type="TouchScreenButton" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 169, 275 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 3 )
+pressed = null
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = ""
+visibility_mode = 0
+_sections_unfolded = [ "Rect", "Textures", "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="video_button2" index="0"]
+
+position = Vector2( 189.799, 149.427 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="video_button2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 428.0
+margin_top = 74.0
+margin_right = 535.0
+margin_bottom = 591.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "+3 "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Sprite2" type="Sprite" parent="video_button2" index="2"]
+
+position = Vector2( 355.187, 143.644 )
+scale = Vector2( 0.547816, 0.547816 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite3" type="Sprite" parent="video_button2" index="3"]
+
+position = Vector2( 381.854, 143.644 )
+scale = Vector2( 0.547816, 0.547816 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite4" type="Sprite" parent="video_button2" index="4"]
+
+position = Vector2( 408.52, 143.644 )
+scale = Vector2( 0.547816, 0.547816 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="4"]
+
+position = Vector2( 159.2, 239.765 )
+rotation = -3.12783e-006
+scale = Vector2( 0.332383, 0.2 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Label" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 60.0
+margin_top = 223.0
+margin_right = 353.0
+margin_bottom = 275.0
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Wave 1 Completed"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="Sprite3" type="Sprite" parent="." index="7"]
+
+position = Vector2( 246.628, 184.775 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite2" type="Sprite" parent="." index="8"]
+
+position = Vector2( 156.843, 174.775 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite4" type="Sprite" parent="." index="9"]
+
+position = Vector2( 69.4947, 184.064 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="pressed" from="continue_buttton" to="." method="_on_continue_buttton_pressed"]
+
+[connection signal="pressed" from="video_button2" to="." method="_on_video_button2_pressed"]
+
+
